@@ -1,0 +1,50 @@
+[
+  {
+    "model": "boxes.box",
+    "pk": 1,
+    "fields": {
+      "name": "Box 1",
+      "description": "Description for Box 1",
+      "amount": 50.00,
+      "attempts": 5,
+      "distribution_type": "random",
+      "status": "active"
+    }
+  },
+  {
+    "model": "boxes.box",
+    "pk": 2,
+    "fields": {
+      "name": "Box 2",
+      "description": "Description for Box 2",
+      "amount": 100.00,
+      "attempts": 10,
+      "distribution_type": "uniform",
+      "status": "inactive"
+    }
+  },
+  {
+    "model": "boxes.box",
+    "pk": 3,
+    "fields": {
+      "name": "Box 3",
+      "description": "Description for Box 3",
+      "amount": 75.00,
+      "attempts": 8,
+      "distribution_type": "random",
+      "status": "active"
+    }
+  },
+  {
+    "model": "boxes.box",
+    "pk": 4,
+    "fields": {
+      "name": "Box 4",
+      "description": "Description for Box 4",
+      "amount": 120.00,
+      "attempts": 12,
+      "distribution_type": "uniform",
+      "status": "inactive"
+    }
+  }
+]

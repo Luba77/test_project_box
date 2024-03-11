@@ -1,0 +1,50 @@
+[
+    {
+        "model": "operations.Operation",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "amount": 50.00,
+            "transaction_id": "00000000-0000-0000-0000-000000000001",
+            "timestamp": "2022-01-01T12:00:00Z",
+            "box": 1,
+            "status": "credited"
+        }
+    },
+    {
+        "model": "operations.Operation",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "amount": 100.00,
+            "transaction_id": "00000000-0000-0000-0000-000000000002",
+            "timestamp": "2022-01-02T12:00:00Z",
+            "box": 2,
+            "status": "debited"
+        }
+    },
+    {
+        "model": "operations.Operation",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "amount": 75.00,
+            "transaction_id": "00000000-0000-0000-0000-000000000003",
+            "timestamp": "2022-01-03T12:00:00Z",
+            "box": 1,
+            "status": "debited"
+        }
+    },
+    {
+        "model": "operations.Operation",
+        "pk": 4,
+        "fields": {
+            "user": 3,
+            "amount": 200.00,
+            "transaction_id": "00000000-0000-0000-0000-000000000004",
+            "timestamp": "2022-01-04T12:00:00Z",
+            "box": 3,
+            "status": "credited"
+        }
+    }
+]

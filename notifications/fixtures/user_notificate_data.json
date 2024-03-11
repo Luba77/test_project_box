@@ -1,0 +1,30 @@
+[
+    {
+        "model": "notifications.usernotification",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "notification": 1,
+            "date": "2023-10-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "notifications.usernotification",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "notification": 2,
+            "date": "2023-10-16T11:00:00Z"
+        }
+    },
+    {
+        "model": "notifications.usernotification",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "notification": 3,
+            "date": "2023-10-17T12:00:00Z"
+        }
+    }
+
+]

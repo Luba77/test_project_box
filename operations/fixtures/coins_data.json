@@ -1,0 +1,32 @@
+[
+    {
+        "model": "operations.coin",
+        "pk": 1,
+        "fields": {
+            "name": "Bitcoin",
+            "rate": "45000.00",
+            "quantity": 100,
+            "status": "active"
+        }
+    },
+    {
+        "model": "operations.coin",
+        "pk": 2,
+        "fields": {
+            "name": "Ethereum",
+            "rate": "3000.00",
+            "quantity": 200,
+            "status": "inactive"
+        }
+    },
+    {
+        "model": "operations.coin",
+        "pk": 3,
+        "fields": {
+            "name": "Litecoin",
+            "rate": "150.00",
+            "quantity": 500,
+            "status": "active"
+        }
+    }
+]

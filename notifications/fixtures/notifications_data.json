@@ -1,0 +1,23 @@
+[
+    {
+        "model": "notifications.notification",
+        "pk": 1,
+        "fields": {
+            "text": "Notification text 1"
+        }
+    },
+    {
+        "model": "notifications.notification",
+        "pk": 2,
+        "fields": {
+            "text": "Notification text 2"
+        }
+    },
+    {
+        "model": "notifications.notification",
+        "pk": 3,
+        "fields": {
+            "text": "Notification text 3"
+        }
+    }
+]

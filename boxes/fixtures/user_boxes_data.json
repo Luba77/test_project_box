@@ -1,0 +1,20 @@
+[
+    {
+        "model": "boxes.userbox",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "box": 1,
+            "status": "active"
+        }
+    },
+    {
+        "model": "boxes.userbox",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "box": 2,
+            "status": "inactive"
+        }
+    }
+]
