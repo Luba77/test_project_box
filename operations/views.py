@@ -1,9 +1,9 @@
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 from .serializers import *
 
 
-class UserBalanceDetailView(ListAPIView):
+class UserBalanceDetailView(generics.ListAPIView):
     serializer_class = UserBalanceSerializer
     permission_classes = [IsAuthenticated]
 
@@ -12,7 +12,7 @@ class UserBalanceDetailView(ListAPIView):
         return UserBalance.objects.filter(user=user)
 
 
-class OperationsDetailView(ListAPIView):
+class OperationsDetailView(generics.ListAPIView):
     serializer_class = OperationsSerializer
     permission_classes = [IsAuthenticated]
 
@@ -21,6 +21,6 @@ class OperationsDetailView(ListAPIView):
         return Operation.objects.filter(user=user)
 
 
-class CoinDetailView(RetrieveAPIView):
+class CoinDetailView(generics.RetrieveAPIView):
     queryset = Coin.objects.all()
     serializer_class = CoinSerializer

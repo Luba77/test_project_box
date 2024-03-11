@@ -1,14 +1,10 @@
 from rest_framework import status, generics
-from rest_framework.generics import RetrieveAPIView
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.response import Response
 from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from .models import ConfirmCode, User
 from .serializers import UserCreateSerializer, UserAuthSerializer, UserCodeSerializer, UserDetailSerializer
-from django.conf import settings
-from django.core.mail import send_mail
-
 
 
 class RegistrationCreateApiView(generics.CreateAPIView):
@@ -57,7 +53,7 @@ class AuthorizationCreateApiView(generics.CreateAPIView):
         return Response(status=status.HTTP_401_UNAUTHORIZED)
 
 
-class UserDetailView(RetrieveAPIView):
+class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserDetailSerializer
     lookup_field = 'pk'

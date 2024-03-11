@@ -149,3 +149,20 @@ SWAGGER_SETTINGS = {
         }
     },
 }
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+EMAIL_BACKEND = 'main.backend.email_backend.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Gmail's SMTP port
+EMAIL_USE_TLS = True  # TLS (Transport Layer Security) is required by Gmail
+EMAIL_SSL_VERIFICATION = False
+EMAIL_USE_SSL = False
+EMAIL_TIMEOUT = None
+EMAIL_SSL_CERTFILE = None
+EMAIL_SSL_KEYFILE = None
+# EMAIL_SSL_CA_CERTS = '/etc/ssl/certs/ca-certificates.crt'
+# Your Gmail email address and password
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
