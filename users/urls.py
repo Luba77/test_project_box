@@ -7,4 +7,5 @@ urlpatterns = [
     path('authorization/', views.AuthorizationCreateApiView.as_view()),
     path('confirm/', views.ConfirmCreateApiView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
+    path('user/update/', views.UserProfileUpdateView.as_view()),
 ]

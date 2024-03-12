@@ -1,10 +1,11 @@
 from rest_framework import status, generics
 from rest_framework.parsers import FormParser, MultiPartParser
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from .models import ConfirmCode, User
-from .serializers import UserCreateSerializer, UserAuthSerializer, UserCodeSerializer, UserDetailSerializer
+from .serializers import *
 
 
 class RegistrationCreateApiView(generics.CreateAPIView):
@@ -57,3 +58,16 @@ class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserDetailSerializer
     lookup_field = 'pk'
+
+
+class UserProfileUpdateView(generics.UpdateAPIView):
+    parser_classes = (FormParser, MultiPartParser)
+    serializer_class = UserProfileUpdateSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
+
+    def perform_update(self, serializer):
+        serializer.save()
+

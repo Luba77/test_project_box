@@ -51,3 +51,19 @@ class UserCreateSerializer(serializers.Serializer):
 
 class UserCodeSerializer(serializers.Serializer):
     verification_code = serializers.CharField()
+
+
+class UserProfileUpdateSerializer(serializers.Serializer):
+    telegram_id = serializers.CharField()
+    telegram_username = serializers.CharField()
+    name = serializers.CharField()
+    phone_number = serializers.CharField()
+    language = serializers.CharField()
+    country = serializers.CharField()
+
+    def update(self, instance, validated_data):
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        return instance
+
